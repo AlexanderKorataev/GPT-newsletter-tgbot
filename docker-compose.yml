@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+
+  telegram_bot:
+    build: ./src/telegram_bot
+    ports:
+      - "5003:5003"  # Предположим, что telegram_bot слушает порт 5003
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}  
+    restart: always
